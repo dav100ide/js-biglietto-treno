@@ -15,3 +15,13 @@ else if (userAge >= 65) {
 // arrontondo a due decimali
 document.getElementById('final-price').innerHTML = `il bigletto costa €
 ${ticketPrice.toLocaleString('en-US', { maximumFractionDigits: 2, minimumFractionDigits: 2 })} ${discountName}`;
+
+//BONUS : cliccando il btn, Fontawesome cambia colore
+const colors = ['red', 'lightblue', 'orange', 'purple', 'pink', 'gold', 'indigo'];
+let index = 0;
+const btn = document.getElementById('change-color');
+btn.addEventListener('click', function onclick() {
+   const train = document.getElementById('train');
+   index = index >= colors.length - 1 ? 0 : index + 1;
+   train.style.color = colors[index];
+});
