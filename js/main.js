@@ -23,5 +23,6 @@ const btn = document.getElementById('change-color');
 btn.addEventListener('click', function onclick() {
    const train = document.getElementById('train');
    index = index >= colors.length - 1 ? 0 : index + 1;
+   // length - 1, pk in un array si conta così 0 1 2 3 4 etc....
    train.style.color = colors[index];
 });
